@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form class="row g-3 mt-5" th:action="@{/index1}" th:object="${employees1}" method="POST">
+    <div class="col-md-6">
+        <label for="inputId" class="form-label">Employee ID</label>
+        <input type="text" class="form-control" id="inputId" th:field="*{id}">
+    </div>
+    <div class="col-md-6">
+        <label for="inputName" class="form-label">Employee Name</label>
+        <input type="text" class="form-control" id="inputName" th:field="*{name}">
+    </div>
+    <div class="col-md-6">
+        <label for="inputDesignation" class="form-label">Employee Designation</label>
+        <input type="text" class="form-control" id="inputDesignation" th:field="*{designation}">
+    </div>
+    <div class="col-md-6">
+        <label for="inputSalary" class="form-label">Employee Salary</label>
+        <input type="text" class="form-control" id="inputSalary" th:field="*{salary}">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>
+
+
+</body>
+</html>
